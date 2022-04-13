@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta charset="utf-8"/>
+    <title>Chanmyay Prayers</title>
+	<script src="./CHM_script.js"></script>
+    <link rel="stylesheet" href="Chanmyay.css" type="text/css" />
+</head>
+
+<body>
+<div id="Prayer"></div>
+</body>
+
+<script>
+	var time = (new Date()).getHours();
+	alert(d);
+	var fnm = "./CHM_AfternoonPrayers.html";
+	if (time < 6) fnm = "./CHM_DawnPrayers.html";
+	else {
+		if (time < 12) fnm = "./CHM_MorningPrayers.html";	
+	}
+	//fnm="./CHM_MorningPrayers_P1_Buddha.html";
+	alert(fnm);
+	loadPage(fnm);
+
+	async function loadPage(fnm) {
+	const response = await fetch(fnm);
+	if (response.ok) {
+		const text = await response.text();
+		document.getElementById('Prayer').innerHTML = html;
+	} else {
+		const message = "Error: ${response.status}";
+		throw new Error(message);
+	}
+/*		
+	fetch(fnm)
+		.then((response)=> response.text())
+		.then((html)=> document.getElementById('Prayer').innerHTML = html)
+    .catch((error) => {
+		alert(error);
+	}); */
+</script>
+</html>

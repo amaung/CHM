@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Chanmyay Prayers</title>
+    <link rel="stylesheet" href="../css/Chanmyay.css" type="text/css"/>
+</head>
+<iframe src="./CHM_PrayersHeader.html" width=100% height=180px title="Prayers">
+</iframe>
+<body>
+<br/>
+ <span style="display: flex; justify-content: center" id="today"></span>
+</p>
+<br/>
+<h3 class="ex1">ဘုရားရှိခိုးများ</h3>
+<p class="myan_menu">
+<span class="myan" id="gunna"></span>
+
+၁။ <a href='./CHM_DawnPrayers.html'>နေ့စဉ် အချိန်လိုက် ဘုရားရှိခိုးများ</a><br/>
+၂။ <a href='./CHM_DawnPrayers.html'>အာရုဏ်ဦး ဘုရားရှိခိုးများ</a><br/>
+၃။ <a href='./CHM_MorningPrayers.html'>နံနက်ခင်း ဘုရားရှိခိုးများ</a><br/>
+၄။ <a href='./CHM_MorningPrayers.html'>နေ့လည်ခင်း ဘုရားရှိခိုးများ</a><br/>
+၅။ <a href='./CHM_Pujana.html'>တရားနာယူပြီး ပူဇော်ကန်တော့ခြင်း</a><br/>
+<br/>
+1. <a style="font-size:20px" onclick=CardinalAttrib() href="#">The Cardinal Attributes of the Buddha, Dhamma and Saṃgha</a><br/>
+</p>
+<br/>
+</body>
+</html>
+<script>
+var today = new Date().toDateString();
+document.getElementById('today').innerHTML="Date: " + today;
+
+function CardinalAttrib()
+{
+	window.open("./Cardinal Attributes of Buddha Dhamma Samgha1.pdf","resizeable,scrollbar"); 
+}
+</script>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta charset="utf-8"/>
+    <title>Chanmyay Prayers</title>
+	<script src="../js/CHM_script.js"></script>
+    <link rel="stylesheet" href="../css/Chanmyay.css" type="text/css" />
+</head>
+
+<body>
+<div id="morningPrayer"></div>
+</body>
+
+<script>
+	var d = WhatIsTodaysCardinalAttribute();
+	//alert(d);
+	var fnm = "./CHM_MorningPrayers_P1_Buddha.html";
+	switch(d)
+	{
+		case 1:
+			fnm = "./CHM_MorningPrayers_P1_Dhamma.html";
+			break;
+		case 2:
+			fnm = './CHM_MorningPrayers_P1_Sangha.html';
+			break;
+	}
+
+	fetch(fnm)
+		.then((response)=> response.text())
+		.then((html)=> document.getElementById('morningPrayer').innerHTML = html)
+    .catch((error) => {
+		alert(error);
+	});
+</script>
+</html>
