@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Chanmyay Prayers</title>
+    <link rel="stylesheet" href="./css/Chanmyay.css" type="text/css"/>
+</head>
+<script>
+function fitIframe(obj){
+  obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+ }
+</script>
+<iframe src="./html/CHM_PrayersHeader.html" onload="(function(){
+	style.height = contentWindow.document.documentElement.scrollHeight + 'px';
+    return false;})();return false;" frameBorder="0" width=100% height=80px title="Prayers">
+</iframe>
+<body>
+<p class"eng" style="display: flex; justify-content: center" id="today"></p>
+<br/>
+<h3 class="ex1">ဘုရားရှိခိုးများ</h3>
+<p class="myan_menu">
+<span class="myan" id="gunna"></span>
+
+<ol>
+<!--၁။ <a href='./html/CHM_TimeBasedPrayers.html'>နေ့စဉ် အချိန်လိုက် ဘုရားရှိခိုးများ</a><br/>-->
+<li><a href='./html/CHM_DawnPrayers.html'>အာရုဏ်ဦး ဘုရားရှိခိုးများ</a></li>
+<li><a href='./html/CHM_MorningPrayers.html'>နံနက်ခင်း ဘုရားရှိခိုးများ</a></li>
+<li><a href='./html/CHM_AfternoonPrayers.html'>နေ့လည်ခင်း ဘုရားရှိခိုးများ</a></li>
+<li><a href='./html/CHM_Pujana.html'>တရားနာယူပြီး ပူဇော်ကန်တော့ခြင်း</a></li>
+<li><a href='./html/poems/CHM_PoemMenu.html'>တရားတော်များမှ ကဗျာများ</a></li>
+</ol>
+<br/>
+1. <a style="font-family:'Arial Unicode MS';font-size:20px" onclick=CardinalAttrib() href="#">The Cardinal Attributes of the Buddha, Dhamma and Saṃgha</a><br/>
+</p>
+<br/>
+</body>
+</html>
+<script>
+var today = new Date().toDateString();
+document.getElementById('today').innerHTML="Date: " + today;
+	
+function CardinalAttrib()
+{
+	window.open("./pdf/Cardinal Attributes of Buddha Dhamma Samgha1.pdf","resizeable,scrollbar"); 
+}
+</script>
