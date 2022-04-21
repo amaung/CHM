@@ -8,7 +8,10 @@ function WhatIsTodaysCardinalAttribute()
 	today = new Date(mm + '/' + dd + '/' + yyyy);
 	
 	var origin = new Date('05/14/2022');
-	var difference = Math.abs(today.getTime() - origin.getTime());
+	var difference = today.getTime() - origin.getTime();
 	var days = difference/(24*3600000);
+	// for negatives days subtract from a fixed day(30)
+	// to get a positive day accurately
+    if (days < 0) days = 30 + days;
 	return days % 3;
 }

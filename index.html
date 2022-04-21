@@ -17,13 +17,14 @@ function fitIframe(obj){
 </iframe>
 <body>
 <p class"eng" style="display: flex; justify-content: center" id="today"></p>
+<p><b>အမှားတွေ့ရှိပါက dhammayaungchi2011@gmail.com သို့ အကြောင်းကြားပေးပါ။</b></p>
 <br/>
 <h3 class="ex1">ဘုရားရှိခိုးများ</h3>
 <p class="myan_menu">
 <span class="myan" id="gunna"></span>
 
 <ol>
-<!--၁။ <a href='./html/CHM_TimeBasedPrayers.html'>နေ့စဉ် အချိန်လိုက် ဘုရားရှိခိုးများ</a><br/>-->
+<li class="myan"><a href='#' onclick=loadTimeBasedPrayers(this)>နေ့စဉ် အချိန်လိုက် ဘုရားရှိခိုးများ</a></li>
 <li class="myan"><a href='./html/CHM_DawnPrayers.html'>အာရုဏ်ဦး ဘုရားရှိခိုးများ</a></li>
 <li class="myan"><a href='./html/CHM_MorningPrayers.html'>နံနက်ခင်း ဘုရားရှိခိုးများ</a></li>
 <li class="myan"><a href='./html/CHM_AfternoonPrayers.html'>နေ့လည်ခင်း ဘုရားရှိခိုးများ</a></li>
@@ -31,6 +32,16 @@ function fitIframe(obj){
 <li class="myan"><a href='./html/poems/CHM_PoemMenu.html'>တရားတော်များမှ ကဗျာများ</a></li>
 </ol>
 <br/>
+<span class="myan">ချမ်းမြေ့ဆရာတော်ဘုရား၏ နေ့စဉ်ဘုရားရှိခိုး စာအုပ်များကို အောက်ပါ dhammadownload link များတွင် ဝင်ရောက်ကြည့်ရှု
+နိုင်ပါသည်။
+</span>
+<br/><br/>
+<ol>
+<li class="myan"><a href='http://dhammadownload.com/File-Library/AshinJanakavamsa-ChanMyay/ChanMyaySayaDaw-Ashin-Janakabhivamsa-GoneTawBuddhaShitKhoeForYogi.pdf'>ဂုဏ်တော်ဘုရားရှိခိုး နှင့် သိမှတ်ဖွယ်အထွေထွေ</a></li>
+<li class="myan"><a href='http://dhammadownload.com/File-Library/AshinJanakavamsa-ChanMyay/AshinJanakavamsa-ChanMyay-ChanMyayMinGalarThinSaYar.pdf'>ချမ်းမြေ့မင်္ဂလာ သင်စရာ</a></li>
+<li class="myan"><a href='http://dhammadownload.com/File-Library/AshinJanakavamsa-ChanMyay/AshinJanakavamsa-ChanMyay-DhammaKaByarPaDaeThar.pdf'>ဓမ္မကဗျာ ပဒေသာ</a></li>
+</ol>
+<br/><br/>
 1. <a style="font-family:'Arial Unicode MS';font-size:20px" onclick=CardinalAttrib() href="#">The Cardinal Attributes of the Buddha, Dhamma and Saṃgha</a>&nbsp&nbsp&nbsp&nbsp&nbsp
 <a href="./pdf/Cardinal Attributes of Buddha Dhamma Samgha1.pdf" download="Cardinal Attributes of Buddha Dhamma Samgha.pdf">[Download]</a>
 <br/>
@@ -45,5 +56,15 @@ document.getElementById('today').innerHTML="Date: " + today;
 function CardinalAttrib()
 {
 	window.open("./pdf/Cardinal Attributes of Buddha Dhamma Samgha1.pdf","resizeable,scrollbar"); 
+}
+function loadTimeBasedPrayers(element)
+{
+	var time = (new Date()).getHours();
+	var fnm = "./html/CHM_AfternoonPrayers.html";
+	if (time < 6) fnm = "./html/CHM_DawnPrayers.html";
+	else {
+		if (time < 12) fnm = "./html/CHM_MorningPrayers.html";	
+	}
+	element.href = fnm;	
 }
 </script>
