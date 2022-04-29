@@ -112,6 +112,12 @@ li.myan {
   text-align: left;
   line-height: 1.8;
 }
+li.eng {
+  font-family:'Arial Unicode MS';
+  font-size:20px;
+  text-align: left;
+  line-height: 1.8;
+}
 span.myan {
   font-family: 'Padauk Book';
   font-size: 22px;

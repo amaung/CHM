@@ -17,8 +17,8 @@ function fitIframe(obj){
 </iframe>
 <body>
 <p class"eng" style="display: flex; justify-content: center" id="today"></p>
-<p><b>အမှားတွေ့ရှိပါက dhammayaungchi2011@gmail.com သို့ အကြောင်းကြားပေးပါ။</b></p>
-<br/>
+<label>Last Updated: Apr 28, 2022<br/>
+email: dhammayaungchi2011@gmail.com</label>
 <h3 class="ex1">ဘုရားရှိခိုးများ</h3>
 <p class="myan_menu">
 <span class="myan" id="gunna"></span>
@@ -30,6 +30,10 @@ function fitIframe(obj){
 <li class="myan"><a href='./html/CHM_AfternoonPrayers.html'>နေ့လည်ခင်း ဘုရားရှိခိုးများ</a></li>
 <li class="myan"><a href='./html/CHM_Pujana.html'>တရားနာယူပြီး ပူဇော်ကန်တော့ခြင်း</a></li>
 <li class="myan"><a href='./html/poems/CHM_PoemMenu.html'>တရားတော်များမှ ကဗျာများ</a></li>
+<li class="myan"><a onclick=PDFBook(2) href="#">ချမ်းမြေ့ နေ့စဉ်ဘုရားရှိခိုးများ စာအုပ်(1pg/side)</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+<a href="./pdf/Chanmyay Daily Prayer Book 2022-04-27.pdf" download="Chanmyay Daily Prayer Book 2022-04-27.pdf">[Download PDF]</a></li>
+<li class="myan"><a onclick=PDFBook(3) href="#">ချမ်းမြေ့ နေ့စဉ်ဘုရားရှိခိုးများ ခေါက်ချိုးစာအုပ်(2pg/side)</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+<a href="./pdf/Chanmyay Daily Prayer Booklet 2022-04-27.pdf" download="Chanmyay Daily Prayer Booklet 2022-04-27.pdf">[Download PDF Booklet]</a></li>
 </ol>
 <br/>
 <span class="myan">ချမ်းမြေ့ဆရာတော်ဘုရား၏ နေ့စဉ်ဘုရားရှိခိုး စာအုပ်များကို အောက်ပါ dhammadownload link များတွင် ဝင်ရောက်ကြည့်ရှု
@@ -41,11 +45,10 @@ function fitIframe(obj){
 <li class="myan"><a href='http://dhammadownload.com/File-Library/AshinJanakavamsa-ChanMyay/AshinJanakavamsa-ChanMyay-ChanMyayMinGalarThinSaYar.pdf'>ချမ်းမြေ့မင်္ဂလာ သင်စရာ</a></li>
 <li class="myan"><a href='http://dhammadownload.com/File-Library/AshinJanakavamsa-ChanMyay/AshinJanakavamsa-ChanMyay-DhammaKaByarPaDaeThar.pdf'>ဓမ္မကဗျာ ပဒေသာ</a></li>
 </ol>
-<br/><br/>
-1. <a style="font-family:'Arial Unicode MS';font-size:20px" onclick=CardinalAttrib() href="#">The Cardinal Attributes of the Buddha, Dhamma and Saṃgha</a>&nbsp&nbsp&nbsp&nbsp&nbsp
-<a href="./pdf/Cardinal Attributes of Buddha Dhamma Samgha1.pdf" download="Cardinal Attributes of Buddha Dhamma Samgha.pdf">[Download]</a>
 <br/>
-</p>
+<ol>
+<li class="eng"><a onclick=PDFBook(1) href="#">The Cardinal Attributes of the Buddha, Dhamma and Saṃgha</a>&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+<a href="./pdf/Cardinal Attributes of Buddha Dhamma Samgha1.pdf" download="Cardinal Attributes of Buddha Dhamma Samgha.pdf">[Download]</a></li>
 <br/>
 </body>
 </html>
@@ -53,9 +56,20 @@ function fitIframe(obj){
 var today = new Date().toDateString();
 document.getElementById('today').innerHTML="Date: " + today;
 	
-function CardinalAttrib()
+function PDFBook(n)
 {
-	window.open("./pdf/Cardinal Attributes of Buddha Dhamma Samgha1.pdf","resizeable,scrollbar"); 
+	switch(n)
+	{
+		case 1:
+			window.open("./pdf/Cardinal Attributes of Buddha Dhamma Samgha1.pdf","resizeable,scrollbar"); 
+			break;
+		case 2:
+			window.open("./pdf/Chanmyay Daily Prayer Book 2022-04-27.pdf","resizeable,scrollbar"); 
+			break;
+		case 3:
+			window.open("./pdf/Chanmyay Daily Prayer Booklet 2022-04-27.pdf","resizeable,scrollbar"); 
+			break;
+	}
 }
 function loadTimeBasedPrayers(element)
 {
